@@ -23,7 +23,7 @@ export default function ComparisonPage() {
 
       <Reveal className="mt-8">
         <div className="glass flex flex-wrap items-center gap-2 rounded-2xl p-4">
-          <span className="mr-1 text-xs font-semibold uppercase tracking-wider text-zinc-400">
+          <span className="mr-1 text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
             Доступность из РФ:
           </span>
           {(Object.keys(AVAILABILITY_META) as Availability[]).map((a) => (
@@ -45,7 +45,7 @@ export default function ComparisonPage() {
                   {(() => {
                     const Icon = CATEGORY_META[category].icon;
                     return (
-                      <span className="flex size-9 items-center justify-center rounded-lg border border-white/10 bg-white/5">
+                      <span className="flex size-9 items-center justify-center rounded-lg border border-zinc-200 dark:border-white/10 bg-zinc-100 dark:bg-white/5">
                         <Icon className="size-4.5 text-indigo-300" />
                       </span>
                     );

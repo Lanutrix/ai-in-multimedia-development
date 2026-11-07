@@ -7,7 +7,7 @@ export default function NotFoundPage() {
     <div className="mx-auto flex max-w-7xl flex-col items-center px-4 py-32 text-center sm:px-6">
       <p className="text-gradient text-7xl font-bold">404</p>
       <p className="mt-4 text-xl font-semibold">Страница не найдена</p>
-      <p className="mt-2 max-w-md text-sm text-zinc-400">
+      <p className="mt-2 max-w-md text-sm text-zinc-600 dark:text-zinc-400">
         Похоже, эта ссылка не существует. Вернитесь на главную или откройте
         каталог инструментов.
       </p>

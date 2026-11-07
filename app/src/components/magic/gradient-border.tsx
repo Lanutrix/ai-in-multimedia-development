@@ -15,7 +15,7 @@ export function GradientBorder({
         className,
       )}
     >
-      <div className="h-full rounded-[15px] bg-zinc-950">{children}</div>
+      <div className="h-full rounded-[15px] bg-white dark:bg-zinc-950">{children}</div>
     </div>
   );
 }

@@ -50,26 +50,30 @@ export const REGION_META: Record<
   RU: {
     label: "Россия",
     labelShort: "РФ",
-    badgeClass: "border-emerald-400/30 bg-emerald-400/10 text-emerald-300",
-    dotClass: "bg-emerald-400",
+    badgeClass:
+      "border-emerald-600/30 bg-emerald-600/10 text-emerald-700 dark:border-emerald-400/30 dark:bg-emerald-400/10 dark:text-emerald-300",
+    dotClass: "bg-emerald-500 dark:bg-emerald-400",
   },
   CN: {
     label: "Китай",
     labelShort: "Китай",
-    badgeClass: "border-rose-400/30 bg-rose-400/10 text-rose-300",
-    dotClass: "bg-rose-400",
+    badgeClass:
+      "border-rose-600/30 bg-rose-600/10 text-rose-700 dark:border-rose-400/30 dark:bg-rose-400/10 dark:text-rose-300",
+    dotClass: "bg-rose-500 dark:bg-rose-400",
   },
   INTL: {
     label: "Международные",
     labelShort: "Мир",
-    badgeClass: "border-sky-400/30 bg-sky-400/10 text-sky-300",
-    dotClass: "bg-sky-400",
+    badgeClass:
+      "border-sky-600/30 bg-sky-600/10 text-sky-700 dark:border-sky-400/30 dark:bg-sky-400/10 dark:text-sky-300",
+    dotClass: "bg-sky-500 dark:bg-sky-400",
   },
   OSS: {
     label: "Open-source",
     labelShort: "OSS",
-    badgeClass: "border-amber-400/30 bg-amber-400/10 text-amber-300",
-    dotClass: "bg-amber-400",
+    badgeClass:
+      "border-amber-600/30 bg-amber-600/10 text-amber-700 dark:border-amber-400/30 dark:bg-amber-400/10 dark:text-amber-300",
+    dotClass: "bg-amber-500 dark:bg-amber-400",
   },
 };
 
@@ -79,19 +83,23 @@ export const AVAILABILITY_META: Record<
 > = {
   native: {
     label: "Работает в РФ без VPN",
-    className: "border-emerald-400/30 bg-emerald-400/10 text-emerald-300",
+    className:
+      "border-emerald-600/30 bg-emerald-600/10 text-emerald-700 dark:border-emerald-400/30 dark:bg-emerald-400/10 dark:text-emerald-300",
   },
   vpn: {
     label: "VPN + зарубежная карта",
-    className: "border-rose-400/30 bg-rose-400/10 text-rose-300",
+    className:
+      "border-rose-600/30 bg-rose-600/10 text-rose-700 dark:border-rose-400/30 dark:bg-rose-400/10 dark:text-rose-300",
   },
   partial: {
     label: "Частично доступен",
-    className: "border-amber-400/30 bg-amber-400/10 text-amber-300",
+    className:
+      "border-amber-600/30 bg-amber-600/10 text-amber-700 dark:border-amber-400/30 dark:bg-amber-400/10 dark:text-amber-300",
   },
   local: {
     label: "Локальный запуск",
-    className: "border-cyan-400/30 bg-cyan-400/10 text-cyan-300",
+    className:
+      "border-cyan-600/30 bg-cyan-600/10 text-cyan-700 dark:border-cyan-400/30 dark:bg-cyan-400/10 dark:text-cyan-300",
   },
 };
 

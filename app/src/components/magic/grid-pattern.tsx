@@ -1,7 +1,10 @@
 /** Тонкая сетка в стиле Magic UI «Grid Pattern». */
 export function GridPattern() {
   return (
-    <svg className="absolute inset-0 h-full w-full" aria-hidden>
+    <svg
+      className="absolute inset-0 h-full w-full text-zinc-900/[0.07] dark:text-white/[0.05]"
+      aria-hidden
+    >
       <defs>
         <pattern
           id="grid-pattern"
@@ -12,7 +15,7 @@ export function GridPattern() {
           <path
             d="M64 0H0V64"
             fill="none"
-            stroke="rgba(255,255,255,0.05)"
+            stroke="currentColor"
             strokeWidth="1"
           />
         </pattern>

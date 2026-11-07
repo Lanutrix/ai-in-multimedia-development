@@ -85,15 +85,15 @@ export default function ToolsPage() {
 
       <Reveal className="mt-8">
         <div className="glass rounded-2xl p-5">
-          <div className="flex items-center gap-2 text-sm font-semibold text-zinc-200">
-            <Compass className="size-4 text-indigo-300" />
+            <div className="flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-200">
+            <Compass className="size-4 text-indigo-600 dark:text-indigo-300" />
             Методология отбора
           </div>
           <div className="mt-3 flex flex-wrap gap-2">
             {CRITERIA.map((c) => (
               <span
                 key={c}
-                className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-zinc-300"
+                className="rounded-full border border-zinc-200 dark:border-white/10 bg-zinc-100 dark:bg-white/5 px-3 py-1 text-xs text-zinc-700 dark:text-zinc-300"
               >
                 {c}
               </span>
@@ -115,18 +115,18 @@ export default function ToolsPage() {
                     <span className={`size-2.5 rounded-full ${meta.dotClass}`} />
                     {meta.label}
                   </span>
-                  <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-zinc-300">
+                  <span className="rounded-full border border-zinc-200 dark:border-white/10 bg-zinc-100 dark:bg-white/5 px-3 py-1 text-sm text-zinc-700 dark:text-zinc-300">
                     {list.length} сервисов
                   </span>
                 </div>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+                <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
                   {REGION_DESC[region]}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   <Button
                     size="sm"
                     variant="outline"
-                    className="h-8 border-white/15 bg-white/5 hover:bg-white/10"
+                    className="h-8 border-white/15 bg-zinc-100 dark:bg-white/5 hover:bg-white/10"
                     render={
                       <Link
                         to="#catalog"
@@ -146,7 +146,7 @@ export default function ToolsPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="h-8 gap-1 text-indigo-300 hover:text-indigo-200"
+                    className="h-8 gap-1 text-indigo-600 dark:text-indigo-300 hover:text-indigo-200"
                     render={<Link to={regionPath(region)} />}
                   >
                     Глубокий разбор <ArrowRight className="size-3.5" />
@@ -166,14 +166,14 @@ export default function ToolsPage() {
               <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
                 Весь каталог
               </h2>
-              <p className="mt-2 text-sm text-zinc-400">
+              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                 Показано {filtered.length} из {tools.length} · фильтры: регион + категория
               </p>
             </div>
             <Button
               size="sm"
               variant="ghost"
-              className="gap-1 text-zinc-400 hover:text-white"
+              className="gap-1 text-zinc-600 dark:text-zinc-400 hover:text-white"
               render={
                 <a href="#catalog" onClick={(e) => { e.preventDefault(); setRegionFilter("all"); setCategoryFilter("all"); }} />
               }
@@ -186,10 +186,10 @@ export default function ToolsPage() {
         {/* Фильтр по региону */}
         <Reveal className="mt-6">
           <Tabs value={regionFilter} onValueChange={handleRegionChange}>
-            <TabsList className="h-auto flex-wrap justify-start gap-1 border border-white/10 bg-white/[0.04] p-1.5">
+            <TabsList className="h-auto flex-wrap justify-start gap-1 border border-zinc-200 dark:border-white/10 bg-white/[0.04] p-1.5">
               <TabsTrigger
                 value="all"
-                className="text-xs data-[state=active]:bg-white/15 data-[state=active]:text-white"
+                className="text-xs data-[state=active]:bg-zinc-900 data-[state=active]:text-zinc-50 dark:data-[state=active]:bg-white/15 dark:data-[state=active]:text-white"
               >
                 Все регионы ({tools.length})
               </TabsTrigger>
@@ -197,7 +197,7 @@ export default function ToolsPage() {
                 <TabsTrigger
                   key={region}
                   value={region}
-                  className="text-xs data-[state=active]:bg-white/15 data-[state=active]:text-white"
+                  className="text-xs data-[state=active]:bg-zinc-900 data-[state=active]:text-zinc-50 dark:data-[state=active]:bg-white/15 dark:data-[state=active]:text-white"
                 >
                   {REGION_META[region].label} (
                   {tools.filter((t) => t.region === region).length})
@@ -210,10 +210,10 @@ export default function ToolsPage() {
         {/* Фильтр по категории */}
         <Reveal className="mt-3">
           <Tabs value={categoryFilter} onValueChange={(v) => setCategoryFilter(v as CategoryFilter)}>
-            <TabsList className="h-auto flex-wrap justify-start gap-1 border border-white/10 bg-white/[0.04] p-1.5">
+            <TabsList className="h-auto flex-wrap justify-start gap-1 border border-zinc-200 dark:border-white/10 bg-white/[0.04] p-1.5">
               <TabsTrigger
                 value="all"
-                className="text-xs data-[state=active]:bg-white/15 data-[state=active]:text-white"
+                className="text-xs data-[state=active]:bg-zinc-900 data-[state=active]:text-zinc-50 dark:data-[state=active]:bg-white/15 dark:data-[state=active]:text-white"
               >
                 Все категории ({regionList.length})
               </TabsTrigger>
@@ -221,7 +221,7 @@ export default function ToolsPage() {
                 <TabsTrigger
                   key={c}
                   value={c}
-                  className="text-xs data-[state=active]:bg-white/15 data-[state=active]:text-white"
+                  className="text-xs data-[state=active]:bg-zinc-900 data-[state=active]:text-zinc-50 dark:data-[state=active]:bg-white/15 dark:data-[state=active]:text-white"
                 >
                   {CATEGORY_META[c].label} (
                   {regionList.filter((t) => t.category === c).length})

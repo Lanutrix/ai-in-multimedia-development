@@ -65,22 +65,22 @@ export default function ToolsRegionPage() {
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
       <div className="flex items-center gap-3">
         <span className={`size-3 rounded-full ${meta.dotClass}`} />
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-600 dark:text-indigo-400">
           {summary.eyebrow}
         </p>
       </div>
       <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
         <SplitText text={`${meta.label}: ${list.length} инструментов`} />
       </h1>
-      <p className="mt-5 max-w-3xl text-base leading-relaxed text-zinc-400">
+      <p className="mt-5 max-w-3xl text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
         <BlurText text={summary.text} delay={0.15} />
       </p>
 
       <Tabs value={category} onValueChange={setCategory} className="mt-10">
-        <TabsList className="h-auto flex-wrap justify-start gap-1 border border-white/10 bg-white/[0.04] p-1.5">
+        <TabsList className="h-auto flex-wrap justify-start gap-1 border border-zinc-200 dark:border-white/10 bg-white dark:bg-white/[0.04] p-1.5">
           <TabsTrigger
             value="all"
-            className="text-xs data-[state=active]:bg-white/15 data-[state=active]:text-white"
+            className="text-xs data-[state=active]:bg-zinc-900 data-[state=active]:text-zinc-50 dark:data-[state=active]:bg-white/15 dark:data-[state=active]:text-white"
           >
             Все ({list.length})
           </TabsTrigger>
@@ -88,7 +88,7 @@ export default function ToolsRegionPage() {
             <TabsTrigger
               key={c}
               value={c}
-              className="text-xs data-[state=active]:bg-white/15 data-[state=active]:text-white"
+              className="text-xs data-[state=active]:bg-zinc-900 data-[state=active]:text-zinc-50 dark:data-[state=active]:bg-white/15 dark:data-[state=active]:text-white"
             >
               {CATEGORY_META[c].label} ({list.filter((t) => t.category === c).length})
             </TabsTrigger>

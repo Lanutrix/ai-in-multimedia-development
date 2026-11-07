@@ -109,7 +109,7 @@ export default function HomePage() {
               wordClassName="text-gradient"
             />
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
             <BlurText
               text="Что генеративный ИИ умеет сегодня и чем его применять: интерактивный каталог из 62 сервисов — российских, китайских, международных и open-source — с проверенными версиями, ценами и доступностью из России."
               delay={0.35}
@@ -126,7 +126,7 @@ export default function HomePage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/15 bg-white/5 hover:bg-white/10"
+              className="border-zinc-300 bg-white hover:bg-zinc-100 dark:border-white/15 dark:bg-white/5 dark:hover:bg-white/10"
               render={<Link to="/comparison" />}
             >
               Сравнительные таблицы
@@ -143,12 +143,12 @@ export default function HomePage() {
       </section>
 
       {/* Marquee */}
-      <section className="border-y border-white/5 bg-zinc-950/60 py-5">
+      <section className="border-y border-zinc-200/80 bg-zinc-100/70 py-5 dark:border-white/5 dark:bg-zinc-950/60">
         <Marquee>
           {highlights().map((t) => (
             <span
               key={t.id}
-              className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-sm text-zinc-300"
+              className="flex items-center gap-2 rounded-full border border-zinc-200 dark:border-white/10 bg-white dark:bg-white/[0.04] px-4 py-1.5 text-sm text-zinc-700 dark:text-zinc-300"
             >
               <span className={`size-1.5 rounded-full ${REGION_META[t.region].dotClass}`} />
               {t.name}
@@ -184,10 +184,10 @@ export default function HomePage() {
                           <span className={`size-2 rounded-full ${meta.dotClass}`} />
                           {meta.label}
                         </span>
-                        <span className="text-2xl font-bold text-zinc-200">{count}</span>
+                        <span className="text-2xl font-bold text-zinc-800 dark:text-zinc-200">{count}</span>
                       </div>
-                      <p className="mt-3 text-sm leading-relaxed text-zinc-400">{desc[region]}</p>
-                      <span className="mt-4 inline-flex items-center gap-1 text-xs text-indigo-300">
+                      <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{desc[region]}</p>
+                      <span className="mt-4 inline-flex items-center gap-1 text-xs text-indigo-600 dark:text-indigo-300">
                         Смотреть <ArrowRight className="size-3" />
                       </span>
                     </SpotlightCard>
@@ -200,7 +200,7 @@ export default function HomePage() {
       </section>
 
       {/* Что внутри */}
-      <section className="border-t border-white/5 bg-zinc-950/60">
+      <section className="border-t border-zinc-200/80 bg-zinc-100/70 dark:border-white/5 dark:bg-zinc-950/60">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <SectionHeading eyebrow="Структура" title="Что внутри исследования" />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -208,9 +208,9 @@ export default function HomePage() {
               <Reveal key={s.to} delay={i * 0.05}>
                 <Link to={s.to} className="block h-full">
                   <SpotlightCard className="h-full p-5">
-                    <s.icon className="size-5 text-indigo-300" />
+                    <s.icon className="size-5 text-indigo-600 dark:text-indigo-300" />
                     <p className="mt-3 font-semibold">{s.title}</p>
-                    <p className="mt-1.5 text-sm text-zinc-400">{s.desc}</p>
+                    <p className="mt-1.5 text-sm text-zinc-600 dark:text-zinc-400">{s.desc}</p>
                   </SpotlightCard>
                 </Link>
               </Reveal>
@@ -229,8 +229,8 @@ export default function HomePage() {
           {FINDINGS.map((f, i) => (
             <Reveal key={f.title} delay={i * 0.08}>
               <SpotlightCard className="h-full p-6">
-                <p className="text-lg font-semibold text-zinc-100">{f.title}</p>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-400">{f.text}</p>
+                <p className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">{f.title}</p>
+                <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{f.text}</p>
               </SpotlightCard>
             </Reveal>
           ))}
@@ -239,8 +239,8 @@ export default function HomePage() {
           <div className="glass flex flex-col items-start gap-4 rounded-2xl p-6 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-start gap-3">
               <Clapperboard className="mt-0.5 size-5 shrink-0 text-cyan-300" />
-              <p className="text-sm leading-relaxed text-zinc-300">
-                <span className="font-semibold text-white">Сквозной кейс:</span>{" "}
+              <p className="text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">
+                <span className="font-semibold text-zinc-900 dark:text-white">Сквозной кейс:</span>{" "}
                 четыре готовых стека — от бесплатного русского до мирового топа —
                 собраны в разделе кейсов, шаг за шагом.
               </p>

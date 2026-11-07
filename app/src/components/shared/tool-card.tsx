@@ -19,8 +19,8 @@ export function ToolCard({ tool }: { tool: Tool }) {
     <SpotlightCard className="flex h-full flex-col p-5">
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-center gap-3">
-          <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5">
-            <Icon className="size-5 text-indigo-300" />
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-zinc-200 bg-zinc-100 dark:border-white/10 dark:bg-white/5">
+            <Icon className="size-5 text-indigo-600 dark:text-indigo-300" />
           </span>
           <div>
             <p className="font-semibold leading-tight">{tool.name}</p>
@@ -32,14 +32,14 @@ export function ToolCard({ tool }: { tool: Tool }) {
         </Badge>
       </div>
 
-      <p className="mt-3.5 text-sm leading-relaxed text-zinc-400">
+      <p className="mt-3.5 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
         {tool.description}
       </p>
 
       <ul className="mt-3.5 grid gap-1.5">
         {tool.features.map((f) => (
-          <li key={f} className="flex items-start gap-2 text-xs text-zinc-300">
-            <Check className="mt-0.5 size-3.5 shrink-0 text-indigo-400" />
+          <li key={f} className="flex items-start gap-2 text-xs text-zinc-700 dark:text-zinc-300">
+            <Check className="mt-0.5 size-3.5 shrink-0 text-indigo-600 dark:text-indigo-400" />
             {f}
           </li>
         ))}
@@ -51,18 +51,18 @@ export function ToolCard({ tool }: { tool: Tool }) {
             {availability.label}
           </Badge>
           {tool.version && (
-            <Badge variant="outline" className="border-white/10 text-zinc-400">
+            <Badge variant="outline" className="border-zinc-200 text-zinc-500 dark:border-white/10 dark:text-zinc-400">
               {tool.version}
             </Badge>
           )}
         </div>
-        <div className="mt-3 flex items-center justify-between gap-2 border-t border-white/5 pt-3">
+        <div className="mt-3 flex items-center justify-between gap-2 border-t border-zinc-200/70 pt-3 dark:border-white/5">
           <span className="text-xs text-zinc-500">{tool.pricing}</span>
           {tool.url && (
             <Button
               variant="ghost"
               size="sm"
-              className="h-7 gap-1.5 px-2 text-xs text-zinc-300 hover:text-white"
+              className="h-7 gap-1.5 px-2 text-xs text-zinc-500 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
               render={
                 <a href={tool.url} target="_blank" rel="noreferrer" />
               }

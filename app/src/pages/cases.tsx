@@ -46,18 +46,18 @@ export default function CasesPage() {
               <div className="flex items-start justify-between gap-3">
                 <div>
                   <p className="text-lg font-semibold">{stack.title}</p>
-                  <p className="mt-1 text-sm text-zinc-400">{stack.subtitle}</p>
+                  <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{stack.subtitle}</p>
                 </div>
                 <Badge
                   variant="outline"
                   className={
                     stack.badge === "РФ"
-                      ? "border-emerald-400/30 bg-emerald-400/10 text-emerald-300"
+                      ? "border-emerald-600/30 bg-emerald-600/10 text-emerald-700 dark:border-emerald-400/30 dark:bg-emerald-400/10 dark:text-emerald-300"
                       : stack.badge === "Китай"
-                        ? "border-rose-400/30 bg-rose-400/10 text-rose-300"
+                        ? "border-rose-600/30 bg-rose-600/10 text-rose-700 dark:border-rose-400/30 dark:bg-rose-400/10 dark:text-rose-300"
                         : stack.badge === "OSS"
-                          ? "border-amber-400/30 bg-amber-400/10 text-amber-300"
-                          : "border-sky-400/30 bg-sky-400/10 text-sky-300"
+                          ? "border-amber-600/30 bg-amber-600/10 text-amber-700 dark:border-amber-400/30 dark:bg-amber-400/10 dark:text-amber-600 dark:text-amber-300"
+                          : "border-sky-600/30 bg-sky-600/10 text-sky-700 dark:border-sky-400/30 dark:bg-sky-400/10 dark:text-sky-300"
                   }
                 >
                   {stack.badge}
@@ -66,7 +66,7 @@ export default function CasesPage() {
               <ol className="mt-5 grid gap-2.5">
                 {stack.steps.map((s, j) => (
                   <li key={s.tool} className="flex items-baseline gap-3 text-sm">
-                    <span className="flex size-6 shrink-0 translate-y-0.5 items-center justify-center rounded-full border border-white/10 bg-white/5 font-mono text-[11px] text-indigo-300">
+                    <span className="flex size-6 shrink-0 translate-y-0.5 items-center justify-center rounded-full border border-zinc-200 dark:border-white/10 bg-white/5 font-mono text-[11px] text-indigo-600 dark:text-indigo-300">
                       {j + 1}
                     </span>
                     <span className="font-medium text-zinc-100">{s.tool}</span>
@@ -74,7 +74,7 @@ export default function CasesPage() {
                   </li>
                 ))}
               </ol>
-              <p className="mt-5 border-t border-white/5 pt-4 text-xs leading-relaxed text-zinc-400">
+              <p className="mt-5 border-t border-white/5 pt-4 text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
                 {stack.note}
               </p>
             </SpotlightCard>
@@ -92,9 +92,9 @@ export default function CasesPage() {
           {ECONOMICS.map((e, i) => (
             <Reveal key={e.title} delay={i * 0.06}>
               <SpotlightCard className="h-full p-6">
-                <e.icon className="size-5 text-indigo-300" />
+                <e.icon className="size-5 text-indigo-600 dark:text-indigo-300" />
                 <p className="mt-3 font-semibold">{e.title}</p>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-400">{e.text}</p>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{e.text}</p>
               </SpotlightCard>
             </Reveal>
           ))}
@@ -111,9 +111,9 @@ export default function CasesPage() {
         <div className="mt-10 grid gap-3">
           {LIMITS.map((l, i) => (
             <Reveal key={l} delay={i * 0.04}>
-              <div className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.03] p-4">
-                <CircleAlert className="mt-0.5 size-4.5 shrink-0 text-amber-300" />
-                <p className="text-sm leading-relaxed text-zinc-300">{l}</p>
+              <div className="flex items-start gap-3 rounded-xl border border-zinc-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-4">
+                <CircleAlert className="mt-0.5 size-4.5 shrink-0 text-amber-600 dark:text-amber-300" />
+                <p className="text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">{l}</p>
               </div>
             </Reveal>
           ))}
