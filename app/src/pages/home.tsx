@@ -14,7 +14,6 @@ import {
   Workflow,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { AuroraBackground } from "@/components/magic/aurora-background";
 import { Marquee } from "@/components/magic/marquee";
 import { SplitText } from "@/components/bits/split-text";
@@ -102,15 +101,6 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <AuroraBackground />
         <div className="relative mx-auto max-w-7xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
-          <Reveal>
-            <Badge
-              variant="outline"
-              className="border-indigo-400/30 bg-indigo-400/10 text-indigo-300"
-            >
-              <Sparkles className="mr-1 size-3" />
-              Учебное исследование · данные на 06.11.2026
-            </Badge>
-          </Reveal>
           <h1 className="mt-6 max-w-4xl text-4xl font-bold leading-[1.1] tracking-tight text-balance sm:text-6xl">
             <SplitText text="Искусственный интеллект" />{" "}
             <SplitText
